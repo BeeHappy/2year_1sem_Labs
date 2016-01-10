@@ -22,25 +22,4 @@ public:
     bool getBottomWalls(int i, int j);
 };
 
-/*
-class Labyrinth
-{
-    bool** labyrinth;
-    int size;
-    int real_size;
-    int* backtrack_x;
-    int* backtrack_y;
-    void generate(int, int, int, int);
-    bool isClosed(int, int) const;
-
-public:
-    Labyrinth();
-    ~Labyrinth();
-    explicit Labyrinth(int);
-    bool** get() const;
-    int getSize() const;
-    void generate();
-    void print() const;
-};
-*/
 #endif // LABYRINTH_H
