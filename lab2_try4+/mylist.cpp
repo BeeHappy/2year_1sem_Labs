@@ -19,7 +19,7 @@ mylist::~mylist()
         }
         else
         {
-            //delete this->head; // del?
+            delete this->head; // del?
             this->head= NULL;
         }
     }
@@ -71,7 +71,7 @@ void mylist::pushf(double x, double y)
 
 void mylist::push(int pos, double x, double y) // inserts d on position pos (pushing all next to 1 pos more)
 {
-    //here should be checking of correct data pos
+    
     dot* nod = head;
     for(int i = 0; i < pos - 2; i++)
         nod = nod->next;
@@ -82,7 +82,7 @@ void mylist::push(int pos, double x, double y) // inserts d on position pos (pus
 
 void mylist::push(int pos, dot* newDot) // inserts d on position pos (pushing all next to 1 pos more)
 {
-    //here should be checking of correct data pos
+    
     dot* nod = head;
     for(int i = 0; i < pos - 2; i++)
         nod = nod->next;
@@ -112,9 +112,7 @@ void mylist::pop()
 
 void mylist::del(int pos)
 {
-    //here should be checking of correct data pos
-
-
+    
     dot* nod = head;
     if(pos == 1) {
         if(nod->next) {

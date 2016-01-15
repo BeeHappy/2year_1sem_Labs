@@ -30,7 +30,7 @@ public:
         if(cur && (cur->j == j))
             return cur->data;
 
-        else {// else do T_T
+        else {
             node* err = new node();
             err->data = 0;
             return err->data;

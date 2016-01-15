@@ -7,8 +7,6 @@
 
 using namespace std;
 
-// 왠지 가끔 안 되는데
-// 아니, 문제는 하는데, 끝에 갑자기 닫아
 
 vector <vector <dot> > convexes;
 mylist list;
@@ -217,7 +215,7 @@ void convexHull(int) {
     }
     else {
         leftTopDot();
-        showDots();         // 이미 지웠는뎈ㅋㅋㅋ 다시 해봐
+        showDots();        
         if(lines) showLines();
         if(edges) showEdgesQueue();
         if(conv) {
