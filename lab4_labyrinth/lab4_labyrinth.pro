@@ -18,10 +18,8 @@ LIBS += -lglut -lGLEW -lGL -lGLU -lSDL2 -lSDL
 
 
 SOURCES += main.cpp \
-    labyrinth.cpp \
-    camera.cpp
+    labyrinth.cpp
 
 HEADERS += \
     labyrinth.h \
-    camera.h \
     input.h

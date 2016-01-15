@@ -455,12 +455,6 @@ void initialize() {
     float pos[] = {200, 200, 200, 1.0};
     glLightfv(GL_LIGHT0, GL_POSITION, pos);
 
-
-//    glMatrixMode(GL_PROJECTION);
-//    glLoadIdentity();
-//    gluPerspective(160, 1, 50, 0);
-
-
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(500, 400, 500, 300, 0, 300, -50, 0, -50);
