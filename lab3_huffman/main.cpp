@@ -6,7 +6,7 @@
 int main()
 {
     huffman huff;
-    huff.make();
+    huff.makeStreams();
 
     return 0;
 }
