@@ -175,7 +175,7 @@ void display() {
     glColor3f(1,1,1);
     glEnd();
 
-    /*static int eyex = 500;
+    static int eyex = 500;
     static int eyey = 400;
     static int eyez = 500;
     static int centerx = 300;
@@ -184,14 +184,20 @@ void display() {
     static int norx = -50;
     static int nory = 0;
     static int norz = -50;
-
-    if(in.isKeyTapped(SDLK_l)){
-        eyex -= 100;
-        cout << "Ok";
-    }
+    
+  // camera
+    if(in.isKeyTapped(SDLK_w))    eyex += 10;
+    if(in.isKeyTapped(SDLK_s))    eyex -= 10;
+    if(in.isKeyTapped(SDLK_a))    eyey += 10;
+    if(in.isKeyTapped(SDLK_d))    eyey -= 10;
+    
+    if(in.isKeyTapped(SDLK_i))    centerx += 10;
+    if(in.isKeyTapped(SDLK_k))    centerx -= 10;
+    if(in.isKeyTapped(SDLK_l))    centerz += 10;
+    if(in.isKeyTapped(SDLK_j))    centerz -= 10;
 
     gluLookAt(eyex, eyey, eyez, centerx, centery, centerz, norx, nory, norz);
-*/
+
 
     glBindTexture(GL_TEXTURE_2D, tex);
 
@@ -215,12 +221,6 @@ void redrawTimer(int) {
     glutPostRedisplay();
     glutTimerFunc(50, redrawTimer, 0);
 }
-
-void move() {
-
-    //camera.keyboard(FORWARD, 300);
-
-   }
 
 string solve() {
     string path;
