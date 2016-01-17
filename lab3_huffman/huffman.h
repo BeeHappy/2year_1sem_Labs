@@ -10,8 +10,7 @@
 
 using namespace std;
 
-struct node
-{
+struct node {
     int frequency;
     char letter;
     node* left;
@@ -25,32 +24,38 @@ struct node
         frequency = 0;
         isUsed = false;
     }
-    node(int freq,node* l, node* r) {
-        frequency = freq;
-        left = l;
-        right = r;
-        isUsed = false;
-        isLeaf = false;
-    }
-    ~node() {}
-    node(int freq, char ch, bool leaf) {
-        letter = ch;
-        frequency = freq;
-        left = right = 0;
-        isUsed = false;
-        isLeaf = leaf;
-    }
 };
+
 
 class huffman
 {
 private:
-    void write(ifstream*,int);
+    vector <node*> tree;
+    node* head;
+    int numberLetter;
+    map <char, int> frequency;
+    map <char, string> codes;
+    map <string, char> backToChar;
+    vector <char> letters;
+
+    void printCodes();
+    void createCode();
+    void findFrequencies(ifstream*);
+    void updateFile(ifstream*,int);
+    void code(node*, string);
+
+    void update();
+    void insert(node);
+    void printTree(node*);
+    void buildVectorbyFreq();
+    void createTree();
+    string createFileName(int,bool);
+
 
 public:
     huffman();
     ~huffman();
-    void make();
+    void makeStreams();
 };
 
 
